@@ -7,7 +7,7 @@ package {
 	/**
 	 * Generates random names
 	 * @author Stephen F. Birsa
-	 * Date: 4/05/2017
+	 * Date: 13/10/2016
 	 */
 	[SWF(width = 600, height = 400, frameRate = 60, backgroundColor = 0xffffff)]
 	final public class Main extends Sprite {
