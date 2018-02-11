@@ -4,29 +4,25 @@ package {
 	import flash.text.TextField;
 	import flash.text.TextFormat;
 	import flash.utils.getTimer;
-	
 	/**
-	 * ...
-	 * @author Stephen Birsa
+	 * Generates random names
+	 * @author Stephen F. Birsa
+	 * Date: 4/05/2017
 	 */
 	[SWF(width = 600, height = 400, frameRate = 60, backgroundColor = 0xffffff)]
 	final public class Main extends Sprite {
 		private const screenText:TextField = new TextField();
-		
-		final public function Main() {
+		public final function Main() {
 			screenText.width = stage.stageWidth;
 			screenText.height = stage.stageHeight;
 			screenText.defaultTextFormat = new TextFormat(null, stage.stageWidth >> 4);
 			stage.addChild(screenText);
 			stage.addEventListener(Event.ENTER_FRAME, update);
 		}
-		
-		final private function update(e:Event):void {
+		private final function update(e:Event):void {
 			if (getTimer() % 10 == 0) {
 				screenText.text = "Name: " + NameDictionary.NameList[int(Math.random() * NameDictionary.NameList.length)] + NameDictionary.generateNumbers();
 			}
 		}
-		
 	}
-	
 }
