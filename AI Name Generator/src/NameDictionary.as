@@ -64,18 +64,6 @@ package {
 			}
 			return "";
 		}
-		
-		//Performance:
-		/*-int() is faster than floor()
-		* -grabbing an element in a Vector is faster than an Array.
-		* Vector considered for static unchanged elements.
-		* Array considered for dynamic changing elements.
-		* -Numbers that are set once are preferably const rather than var
-		* -When multiple ifs are correlated by the same var, else if for the multiple ifs after the first if is considered
-		* consider:
-		* if (b > 9) {} if (b < 10) {} -even if b > 9 is true, the second if still has to be checked
-		* if (b > 9) {} else if (b < 10) {} -if b > 9 is true, the second if is not checked as it is only the else condition, thus faster if checking
-		* */
 	}
 
 }
